@@ -56,10 +56,9 @@ print(f2([1,3,6,9,0,8]))
 
 #检查字典的每一个value的长度,如果大于2，那么仅保留前两个长度的内容，并将新内容返回给调用者。
 def f3(s):
-    for k in s.keys():
-        for v in s.values():
-            if len(v) >2 :
-                s[k]=v[0:1]
+    for i in s.items():
+        if len(i[1]) > 2 :
+            s[i[0]]=i[1][0]+i[1][1]
     return s
 
 dic = {"k1": "v1v1", "k2": [11,22,33,44]}
